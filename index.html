@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>건물 관리 게임</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>건물 관리 게임</h1>
+    <div id="stats">
+        <p>잔액: <span id="balance">₩0</span></p>
+        <p>남은 빚: <span id="debt">₩10,000,000,000</span></p>
+        <p>이번 달 예상 월세 수익: <span id="monthlyIncome">₩0</span></p> <!-- 수정된 부분 -->
+        <p>세입자 수: <span id="tenantCount">0</span>명</p> <!-- 추가된 부분 -->
+        <p>날짜: <span id="year">2023</span>년 <span id="month">1</span>월 <span id="day">1</span>일</p>
+    </div>
+    <div id="controls">
+        <button id="rollDice">주사위 굴리기</button>
+        <button id="resetGame">게임 초기화</button>
+    </div>
+    <!-- 타이머 표시 부분은 삭제된 상태로 유지 -->
+    <div id="dice-area">
+        <div id="dice">
+            <!-- 주사위 애니메이션 영역 -->
+            <img id="diceImage" src="dice1.png" alt="주사위" />
+        </div>
+        <p>주사위 결과: <span id="diceResult">-</span></p>
+    </div>
+    <div id="building">
+        <!-- 층과 호실이 여기 생성됩니다 -->
+    </div>
+    <div id="eventLog">
+        <!-- 이벤트 결과 표시 영역 -->
+        <h2>이벤트 로그</h2>
+        <ul id="eventList">
+            <!-- 이벤트 내용이 여기 추가됩니다 -->
+        </ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
