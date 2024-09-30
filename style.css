@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+#building {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.floor {
+    display: flex;
+}
+
+.room {
+    width: 60px;
+    height: 60px;
+    border: 1px solid #000;
+    margin: 2px;
+    position: relative;
+}
+
+.room.vacant {
+    background-color: #fff;
+}
+
+.room.occupied {
+    background-color: #90ee90;
+}
+
+.tenant {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.rent-display {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    font-size: 12px;
+    color: #000;
+}
+
+#stats {
+    margin-bottom: 20px;
+}
+
+#controls {
+    margin-top: 20px;
+}
+
+#controls button {
+    padding: 10px 20px;
+    margin: 5px;
+}
+
+#timer {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#dice-area {
+    margin-top: 20px;
+}
+
+#dice {
+    margin: 10px auto;
+    width: 100px;
+    height: 100px;
+}
+
+#diceImage {
+    width: 100%;
+    height: auto;
+}
+
+#eventLog {
+    margin-top: 20px;
+}
+
+#eventList {
+    list-style-type: none;
+    padding: 0;
+}
+
+#eventList li {
+    margin-bottom: 5px;
+}
