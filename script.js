@@ -1,7 +1,7 @@
 const totalFloors = 5;
 const roomsPerFloor = 4;
 let balance = 0;
-let debt = 10000000000;
+let debt = 1000000000;
 let year = 2023;
 let month = 1;
 let day = 1;
@@ -247,7 +247,7 @@ function loadGameState() {
 
         // 시간, 잔액, 빚 복원
         balance = gameState.balance || 0;
-        debt = gameState.debt || 10000000000;
+        debt = gameState.debt || 1000000000;
         year = gameState.year || 2023;
         month = gameState.month || 1;
         day = gameState.day || 1;
