@@ -1,22 +1,33 @@
 body {
     font-family: Arial, sans-serif;
-    text-align: center;
+    margin: 20px;
+    text-align: center; /* 전체 텍스트 가운데 정렬 */
+}
+
+#stats {
+    margin-bottom: 20px;
+}
+
+#controls {
+    margin-bottom: 20px;
 }
 
 #building {
-    display: inline-block;
-    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 건물 가운데 정렬 */
 }
 
 .floor {
     display: flex;
+    margin-bottom: 0px;
 }
 
 .room {
     width: 60px;
     height: 60px;
     border: 1px solid #000;
-    margin: 2px;
+    margin: 1px;
     position: relative;
 }
 
@@ -25,67 +36,65 @@ body {
 }
 
 .room.occupied {
-    background-color: #90ee90;
+    background-color: #add8e6;
 }
 
 .tenant {
     position: absolute;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
+    top: 5px;
+    left: 5px;
+    cursor: pointer;
 }
 
 .rent-display {
     position: absolute;
-    top: 0;
-    width: 100%;
-    font-size: 12px;
-    color: #000;
+    bottom: 15px;
+    left: 5px;
+    font-size: 9px;
 }
 
-#stats {
-    margin-bottom: 20px;
-}
-
-#controls {
-    margin-top: 20px;
-}
-
-#controls button {
-    padding: 10px 20px;
-    margin: 5px;
-}
-
-#timer {
-    margin-top: 10px;
-    font-size: 16px;
-    font-weight: bold;
-}
-
-#dice-area {
-    margin-top: 20px;
-}
-
-#dice {
-    margin: 10px auto;
-    width: 100px;
-    height: 100px;
-}
-
-#diceImage {
-    width: 100%;
-    height: auto;
+.contract-display {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    font-size: 9px;
 }
 
 #eventLog {
     margin-top: 20px;
+    text-align: center; /* 이벤트 로그 제목 가운데 정렬 */
+}
+
+#eventLog h2 {
+    margin-bottom: 10px;
 }
 
 #eventList {
     list-style-type: none;
     padding: 0;
+    display: inline-block; /* 가운데 정렬을 위해 추가 */
+    text-align: center; /* 이벤트 로그 제목 가운데 정렬 */
 }
 
 #eventList li {
     margin-bottom: 5px;
+}
+
+#dayProgressContainer {
+    width: 10%;
+    background-color: #ddd;
+    border: 1px solid #aaa;
+    margin: 10px auto;
+    height: 10px;
+    position: relative;
+}
+
+#dayProgressBar {
+    width: 0%;
+    height: 100%;
+    background-color: #4caf50;
+}
+
+#dice-area {
+    text-align: center; /* 주사위 영역 가운데 정렬 */
 }
