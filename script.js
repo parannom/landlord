@@ -235,11 +235,11 @@ function handleEvent(diceValue) {
     let eventMessage = '';
     switch (diceValue) {
         case 1:
-            // 세입자 1~3명 입주
+            // 세입자 1~5명 입주
             {
                 const vacantRooms = rooms.filter(room => !room.occupied);
                 if (vacantRooms.length > 0) {
-                    const maxTenantsToMoveIn = Math.min(3, vacantRooms.length);
+                    const maxTenantsToMoveIn = Math.min(5, vacantRooms.length);
                     const tenantsToMoveIn = getRandomAmount(1, maxTenantsToMoveIn);
                     tenantMoveInCustom(tenantsToMoveIn);
                     eventMessage = `새로운 세입자 ${tenantsToMoveIn}명이 입주했습니다.`;
