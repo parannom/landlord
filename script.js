@@ -186,6 +186,13 @@ function updateContractPeriods() {
             room.contractPeriod--;
             if (room.contractDisplayElement) {
                 room.contractDisplayElement.textContent = `${room.contractPeriod}개월`;
+
+                // 남은 계약 기간에 따른 색상 변경
+                if (room.contractPeriod <= 2) {
+                    room.contractDisplayElement.style.color = 'red';
+                } else {
+                    room.contractDisplayElement.style.color = 'black';
+                }
             }
             if (room.contractPeriod <= 0) {
                 // 계약 기간 만료, 세입자 퇴거
