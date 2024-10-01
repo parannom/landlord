@@ -430,6 +430,7 @@ function autoAdvanceTime() {
             // 게임 종료 조건 (실패)
             if (debt > 0) {
                 addEventLog('빚을 갚지 못해 은행이 건물을 가져갔습니다.');
+                diceImage.src = `failure.png`;
                 rollDiceButton.disabled = true;
                 resetGameButton.disabled = false; // 초기화 버튼 활성화
                 clearInterval(timerIntervalId); // 자동 시간 진행 중지
@@ -448,6 +449,7 @@ function autoAdvanceTime() {
     // 게임 종료 조건 (성공)
     if (debt <= 0) {
         addEventLog('축하합니다! 빚을 모두 갚았습니다!');
+        diceImage.src = `success.png`;
         rollDiceButton.disabled = true;
         resetGameButton.disabled = false; // 초기화 버튼 활성화
         clearInterval(timerIntervalId); // 자동 시간 진행 중지
